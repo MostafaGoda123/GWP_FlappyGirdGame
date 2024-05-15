@@ -1,0 +1,65 @@
+:root {
+   --bgColor : #171427 ;
+   --birdColor : yellow ;
+   --obstacleColor : #f8f8f8 ;   }
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;   }
+html {
+   font-size: 62.5% ;
+   font-family: sans-serif;   }
+@media (max-width : 768px ) {
+   html {
+      font-size: 43.75%;
+   }}
+/*-----------*/
+#game {
+   width: 50rem ;
+   height: 50rem;
+   background: var(--bgColor);   
+   margin: 5vh auto;
+   position: relative;
+   overflow: hidden;
+   border: 1px solid black;   }
+#obstacle {
+   width: 5rem ;
+   height: 100% ;
+   /* background: red;x */
+   background: var(--obstacleColor);
+   position: absolute;
+   top: 0 ;
+   left: 100% ;
+   animation : move 2s infinite linear ;   }
+#hole {
+   position: absolute;
+   top: 50% ;
+   left: 100% ;
+   width: 5rem ;
+   height: 15rem ;
+   background: var(--bgColor);
+   animation : move 2s infinite linear ;   }
+#bird {
+   width: 2rem ;
+   height: 2rem;
+   background: var(--birdColor);
+   border-radius: 50% ;
+   position: absolute;
+   top: 50% ;
+   z-index: 3;   }
+@keyframes move {
+   0% {
+      left: 100%;
+   }
+   100% {
+      left: -6rem ;
+   }   }
+
+
+
+
+
+
+
+
+
